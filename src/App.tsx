@@ -8,11 +8,11 @@ import MainPage from './components/pages/MainPage';
 const Layout = (props: React.HTMLProps<HTMLElement>) => (
 	<Box p={5}>
 		<HStack mb={5} spacing={2}>
-			<Link as={ReachLink} to="/" textDecoration="underline">
+			<Link as={ReachLink} to="/prototype/" textDecoration="underline">
 				메인
 			</Link>
 			|
-			<Link as={ReachLink} to="/application" textDecoration="underline">
+			<Link as={ReachLink} to="/prototype/application" textDecoration="underline">
 				신청
 			</Link>
 		</HStack>
