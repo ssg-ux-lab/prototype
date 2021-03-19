@@ -24,8 +24,8 @@ function App() {
 	return (
 		<Layout>
 			<PageTransitionRouter>
-				<MainPage path="/" />
-				<ApplicationPage path="/application" />
+				<MainPage path="/prototype/" />
+				<ApplicationPage path="/prototype/application" />
 			</PageTransitionRouter>
 		</Layout>
 	);
