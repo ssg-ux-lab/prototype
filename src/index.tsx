@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
+import theme from './theme';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import App from './App';
 
 /* ----------------------여기부터-------------------------- */
 //GTM(구글 태그 매니저의 약자)을 임포트했습니다.
@@ -18,8 +21,10 @@ TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ChakraProvider>
-			<App />
+		<ChakraProvider theme={theme}>
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</ChakraProvider>
 	</React.StrictMode>,
 	document.getElementById('root')

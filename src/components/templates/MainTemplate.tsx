@@ -9,7 +9,9 @@ const MainTemplate = (props: Props) => {
 		<PageTransition>
 			메인페이지 템플릿
 			<Stack>
-				<Button id="primary">첫 번째 버튼입니다.</Button>
+				<Button colorScheme="primary" id="primary">
+					첫 번째 버튼입니다.
+				</Button>
 				<Button id="primary">두 번째 버튼입니다.</Button>
 			</Stack>
 		</PageTransition>
