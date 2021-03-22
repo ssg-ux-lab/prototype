@@ -14,7 +14,7 @@ import TagManager from 'react-gtm-module';
 
 //구글 태그 매니저 계정과 연동
 const tagManagerArgs = {
-	gtmId: 'GTM-56LC65P',
+	gtmId: process.env.GTM_ID,
 };
 TagManager.initialize(tagManagerArgs);
 /* -----------------------여기까지가 끝! 초간단------------------------- */
