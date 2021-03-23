@@ -1,11 +1,11 @@
 import React from 'react';
 import { RouteComponentProps } from '@reach/router';
-import InventoryTemplate from '../templates/InventoryTemplate';
+import MainTemplate from '../templates/MainTemplate';
 
 interface Props extends RouteComponentProps {}
 
 const MainPage = (props: Props) => {
-	return <InventoryTemplate />;
+	return <MainTemplate />;
 };
 
 export default MainPage;
