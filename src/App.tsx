@@ -1,27 +1,28 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Box, HStack, Link } from '@chakra-ui/react';
 import { Link as ReachLink } from '@reach/router';
 import PageTransitionRouter from './components/atoms/PageTransition/PageTransitionRouter';
+import { UserContext } from "./providers/UserProvider";
 import MainPage from './components/pages/MainPage';
-
-const Layout = (props: React.HTMLProps<HTMLElement>) => (
-	<Box p={5}>
-		{/* <HStack mb={5} spacing={2}>
-			<Link as={ReachLink} to="/prototype/" textDecoration="underline">
-				메인
-			</Link>
-		</HStack> */}
-		{props.children}
-	</Box>
-);
+import SignInPage from './components/pages/SignInPage';
+import SignUpPage from "./components/pages/SignUpPage";
+import PasswordResetPage from "./components/pages/PasswordResetPage";
 
 function App() {
+  const user = useContext(UserContext);
 	return (
-		<Layout>
+		<Box p={5}>
+			{
+				user ?
+        <MainPage />
+      :
 			<PageTransitionRouter>
-				<MainPage path="/prototype/" />
+          <SignInPage path="/prototype" />
+          <SignUpPage path="/prototype/signUp" />
+          <PasswordResetPage path = "/prototype/passwordReset" />
 			</PageTransitionRouter>
-		</Layout>
+			}
+		</Box>
 	);
 }
 

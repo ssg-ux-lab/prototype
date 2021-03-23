@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import UserProvider from './providers/UserProvider';
 import App from './App';
 
 /* ----------------------여기부터-------------------------- */
@@ -21,11 +22,13 @@ TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ChakraProvider theme={theme}>
-			<Provider store={store}>
-				<App />
-			</Provider>
-		</ChakraProvider>
+		<Provider store={store}>
+			<UserProvider>
+				<ChakraProvider theme={theme}>
+					<App />
+				</ChakraProvider>
+			</UserProvider>
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
