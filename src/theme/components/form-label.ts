@@ -1,7 +1,6 @@
 const baseStyle = {
 	fontSize: 'lg',
-	mr: 3,
-	mb: 0,
+	mb: 2,
 	fontWeight: 'medium',
 	transition: 'all 0.2s',
 	opacity: 1,
